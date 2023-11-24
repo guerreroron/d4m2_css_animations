@@ -147,7 +147,36 @@ a:hover:after {
     align-items: center;
     padding: 0px 15px;
     line-height: 1.6;
-    text-align: center;
+    text-align: justify;
+}
+
+.footer-texto {
+    min-width: 7em;
+}
+
+.footer_coniconos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    padding-right: 15px;
+}
+
+.footer_coniconos .iconos i {
+    padding: 0px 15px;
+    cursor: pointer;
+}
+
+.footer_coniconos .iconos i:hover {
+    color: #80CED7;
 }
 
 .numpages {
@@ -166,14 +195,12 @@ a:hover:after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #CCDBDC;
     padding-top: 10px;
     padding-bottom: 10px;
     color: #003249;
 }
 
 .card img {
-    box-shadow: 5px 5px 8px rgb(156, 233, 226);
     max-width: 13.67em;
 }
 
@@ -190,7 +217,7 @@ a:hover:after {
 }
 
 .card:hover {
-    filter: brightness(1.0533) contrast(110%) saturate(130%); 
+    filter: brightness(1.0533) contrast(120%) saturate(130%); 
     transition: 0.867s ease;
 }
   
@@ -206,8 +233,9 @@ a:hover:after {
 .card p {
     text-align: center;
     padding: 10px 20px 2px 20px;
-    font-size: 1.1em;
+    font-size: 1.15em;
     line-height: 1.11;
+    font-weight: 500;
 }
 
 .card h4 {
@@ -215,7 +243,7 @@ a:hover:after {
 }
 
 span {
-    color: #007EA7;
+    color: #003249;
     font-size: 0.8em;
 }
 
@@ -495,8 +523,8 @@ span {
 @media (max-width: 576px) {
     .container {
         display: grid;
-        grid-template-columns:  repeat(5, 19.5%);
-        grid-template-rows: repeat(9, 4.131em);
+        grid-template-columns:  repeat(5, 19.8vw);
+        grid-template-rows: repeat(9, 9.7vh);
         justify-content: center;
         }
 
@@ -568,7 +596,7 @@ span {
     }
 
     .footer {
-        grid-row: 9 / -1;
+        grid-row: 10 / -1;
         grid-column: 1 / -1;
         height: 5em;
     }
@@ -577,8 +605,9 @@ span {
         display: none;
     }
 
-    .footer-largo {
-        display: none;
+    .footer-texto p {
+        line-height: 1.0;
+        padding-right: 20px;
     }
 
     .numpages {
@@ -631,8 +660,8 @@ span {
 @media (min-width: 577px) {
     .container {
         display: grid;
-        grid-template-columns:  repeat(4, 24%);
-        grid-template-rows: repeat(9, 6.2em);
+        grid-template-columns:  repeat(4, 24.88vw);
+        grid-template-rows: repeat(9, 11.1vh);
         justify-content: center;
         }
 
@@ -677,7 +706,7 @@ span {
     }
 
     .footer {
-        grid-row: 8 / 10;
+        grid-row: 8 / -1;
         grid-column: 1 / 2;
         padding: 10px 10px;
     }
@@ -685,8 +714,27 @@ span {
     .footer-largo {
         display: none;
     }
-    
 
+    .footer_coniconos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-texto {
+        line-height: 1.05;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+
+    .footer-texto p {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
     .numpages {
         grid-row: 9 / 10;
         grid-column: 2 / -1;
@@ -696,7 +744,7 @@ span {
 @media (min-width: 992px) {
     .container {
         display: grid;
-        grid-template-columns:  repeat(5, 19.5%);
+        grid-template-columns:  repeat(5, 19.95vw);
         grid-template-rows: repeat(9, 5.7em);
         justify-content: center;
         }
@@ -745,10 +793,41 @@ span {
         grid-row: 10 / -1;
         grid-column: 1 / 1;
         line-height: 1.1;
+        padding-right: 0px;
     }
 
     .footer-largo {
         display: none;
+    }
+
+    .footer-texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 0px;
+    }
+
+    .footer-texto p {
+        text-align: start;
+        width: 100%;
+        font-size: 1.0vw;
+    }
+    
+    .footer_coniconos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .iconos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.7vw;
+        padding: 0px 0.5vw;
     }
     
     .numpages {
